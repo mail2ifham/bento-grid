@@ -1,0 +1,16 @@
+
+body{
+    padding-top: 25px;
+
+}
+
+.wrapper{
+    gap: 40px;
+    padding: 24px 10px;
+    // width: 100%;
+    display: grid;
+    grid-template-columns: 375px + 80px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+}

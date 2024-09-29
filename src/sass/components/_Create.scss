@@ -1,0 +1,10 @@
+@use '../base/variables' as v ;
+
+.Create-container{
+    border-radius: 10px;
+    background-color: v.$Yellow_100 ;
+
+    span{
+        color:v.$Purple_500
+    }
+}

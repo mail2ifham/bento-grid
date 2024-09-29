@@ -1,0 +1,33 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.social-container {
+  @include m.container-initiate(v.$Purple_500);
+  color: v.$White;
+  font-weight: v.$font-weights-400;
+  padding: 45px 48px;
+
+  h2 {
+    flex: 1;
+    font-size: 3rem;
+    line-height: 0.9;
+    font-weight: 500;
+    text-align: center;
+
+    span {
+      color: v.$Yellow_500;
+    }
+  }
+  img {
+    padding: 20px 0 10px 0;
+    width: 70%;  }
+
+
+  p {
+    margin: 0;
+
+    color: v.$Purple_100;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}

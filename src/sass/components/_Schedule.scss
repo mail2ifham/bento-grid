@@ -1,0 +1,19 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.schedule-container {
+  @include m.container-initiate(v.$Purple_100);
+
+  h2 {
+    padding: 10px 0 20px 0;
+    letter-spacing: -1px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1;
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,25 @@
+@use './variables' as v;
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:v.$font;
+    font-size: v.$base-font-size;
+    font-weight: v.$font-weights-500;
+    color:v.$Black;
+    background: #f0f0f0;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
