@@ -1,10 +1,12 @@
 import React from "react";
-import SMHandlers from "../assets/images/illustration-multiple-platforms.webp"
+import SMHandlers from "../assets/images/illustration-multiple-platforms.webp";
 
 function Manage() {
   return (
     <div className="manage-container">
-      <img src={SMHandlers} alt="social media handlers" />
+      <div>
+        <img src={SMHandlers} alt="social media handlers" />
+      </div>
       <h2>Manage multiple accounts and platforms.</h2>
     </div>
   );

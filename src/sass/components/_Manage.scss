@@ -2,13 +2,37 @@
 @use "../base/mixin" as m;
 
 .manage-container {
-  @include m.container-initiate(v.$White);
+  @include m.container-initiate(v.$White,24px);
+  @include m.breakpoint(large) {
 
+    grid-column: 2;
+    grid-row: 3/5;
+    padding-right: 0;
+  }
 
   h2 {
     margin-top: 10px;
     font-size: 1.6rem;
     line-height: 0.9;
-    // font-weight: 600;
+    @include m.breakpoint(large) {
+      font-weight: 800;
+      font-size: 1.8rem;
+ 
+    }
+  }
+
+  div{
+    @include m.breakpoint(large) {
+      overflow: hidden;
+    }
+  }
+
+  img {
+    @include m.breakpoint(large) {
+      position: relative;
+      left: 10px;
+      padding: 15px 0;
+      width: 140%;
+    }
   }
 }

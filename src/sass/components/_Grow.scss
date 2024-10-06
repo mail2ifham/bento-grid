@@ -1,0 +1,39 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.grow-container {
+  @include m.container-initiate(v.$Purple_500);
+  @include m.breakpoint(large){
+    grid-column: 3/-1;
+    grid-row: 5/7;
+    flex-direction: row;
+
+  }
+
+  img {
+    margin-top: 8px;
+    width: 75%;
+    
+    @include m.breakpoint(large){
+      width: 40%;
+      padding: 10px 0;
+      
+    }
+  }
+
+  h2 {
+    color: v.$White;
+    text-align: center;
+    font-size: 2.1rem;
+    padding: 41px 48px 10px;
+    line-height: 0.9;
+    font-weight: 500;
+    
+    @include m.breakpoint(large){
+      text-align: start;
+      font-size: 2.5rem;
+      padding:10px;
+      
+    }
+  }
+}

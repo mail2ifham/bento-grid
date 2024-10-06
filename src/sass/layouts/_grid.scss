@@ -1,16 +1,22 @@
+@use "../base/mixin" as *;
 
-body{
-    padding-top: 25px;
+.wrapper {
+  height: 100vh;
+  max-width: 1120px;
+  gap: 40px;
+  padding: 24px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
 
-}
+  @include breakpoint(medium) {
+    padding: 24px 12.5%;
+  }
 
-.wrapper{
-    gap: 40px;
-    padding: 24px 10px;
-    // width: 100%;
-    display: grid;
-    grid-template-columns: 375px + 80px;
-    grid-template-columns: 1fr;
-    justify-content: center;
-
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, auto);
+    gap: 30px;
+    padding: 24px;
+  }
 }

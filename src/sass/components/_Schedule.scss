@@ -3,12 +3,28 @@
 
 .schedule-container {
   @include m.container-initiate(v.$Purple_100);
+  
+  @include m.breakpoint(large){
+    overflow: hidden;
+    grid-column: 4/-1;
+    grid-row: 1/5;
+  }
 
   h2 {
     padding: 10px 0 20px 0;
     letter-spacing: -1px;
+    line-height: 0.9;
   }
 
+  img{
+    @include m.breakpoint(large){
+
+      position: relative;
+      left: 40%;
+      width:160%;
+    }
+    }
+  
   p {
     margin: 0;
     line-height: 1;

@@ -1,10 +1,38 @@
-@use '../base/variables' as v ;
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
 
-.Create-container{
-    border-radius: 10px;
-    background-color: v.$Yellow_100 ;
+.Create-container {
+  @include m.container-initiate(v.$Yellow_100,32px);
 
-    span{
-        color:v.$Purple_500
+  @include m.breakpoint(large){
+    grid-column: 1;
+    grid-row: 1/4;
+    justify-content: center;
+
+
+  }
+
+  h2 {
+    font-size:2rem;
+    line-height: .9;
+    font-weight: 600;
+    letter-spacing: -1px;
+    i {
+      color: v.$Purple_500;
     }
+  }
+
+  img {
+    align-self: flex-start;
+    width: 70%;
+    margin-top: 24px;
+    
+    @include m.breakpoint(large){
+      
+      width: 100%;
+      align-self: center;
+  
+    }
+  
+  }
 }

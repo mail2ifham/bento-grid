@@ -2,11 +2,12 @@
 @use "../base/mixin" as m;
 
 .social-container {
-  @include m.container-initiate(v.$Purple_500);
   color: v.$White;
-  font-weight: v.$font-weights-400;
-  padding: 45px 48px;
-
+  @include m.container-initiate(v.$Purple_500, 45px 48px);
+  @include m.breakpoint(large) {
+    grid-column: 2/4;
+    grid-row: 1/3;
+  }
   h2 {
     flex: 1;
     font-size: 3rem;
@@ -20,8 +21,13 @@
   }
   img {
     padding: 20px 0 10px 0;
-    width: 70%;  }
+    width: 70%;
+    
+    @include m.breakpoint(large){
+      width: 45%;
 
+    }
+  }
 
   p {
     margin: 0;

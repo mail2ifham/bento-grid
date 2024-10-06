@@ -1,20 +1,34 @@
-@use '../base/variables' as v;
-@use '../base/mixin' as m;
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
 
-.maintain-container{
-    @include m.container-initiate(v.$Yellow_500);
-    padding-bottom: 0;
-    height:85%;
-    overflow: hidden;
-    h2{
+.maintain-container {
+  @include m.container-initiate(v.$Yellow_500, 16px 16px 0);
+
+  @include m.breakpoint(large) {
+      grid-column: 3;
+      grid-row: 3/5;
+      overflow: hidden;
+    }
+    h2 {
         font-size: 1.7rem;
         line-height: 0.9;
         font-weight: 650;
         padding-bottom: 24px;
+        
+        @include m.breakpoint(large) {
+            font-size: 2rem;
+        }
     }
 
-    img{
-        width: 70%;
-        align-self: flex-start;
+    img {
+    width: 70%;
+    align-self: flex-start;
+    
+    @include m.breakpoint(large) {
+        width: 100%;
+        align-self: center;
+        
+
     }
+  }
 }

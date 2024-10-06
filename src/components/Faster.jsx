@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import img from "../assets/images/illustration-audience-growth.webp"
 
 function faster() {
   return (
-    <div> >56% faster audience growth</div>
-  )
+    <div className="faster-container">
+      <h2> &gt;56%</h2> 
+      <p>faster audience growth</p>
+      <img src={img} alt="" />
+    </div>
+  );
 }
 
-export default faster
+export default faster;

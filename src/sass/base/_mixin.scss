@@ -1,11 +1,42 @@
-@use './variables' as v;
+@use "./variables" as v;
 
-@mixin container-initiate($color){
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: v.$shadow;
-    padding: 16px;
-    background-color:$color;
+@mixin container-initiate(
+  $color,
+  $padding: 16px,
+  $l-padding: 0,
+  $align-items: center
+) {
+  display: flex;
+  align-items: $align-items;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: v.$shadow;
+  padding: $padding;
+  background-color: $color;
+
+  @include breakpoint(large) {
+    @if $l-padding == 24-pixel {
+      padding: 24px;
+    }
+  }
+}
+
+//breakpoints map
+
+$breakpoints: (
+  "medium": "(min-width: 480px) and (max-width: 999px)",
+  "large": "(min-width: 1000px)",
+);
+
+// breakpoint mixins
+
+@mixin breakpoint($screen-size) {
+  $breakpoint-map: map-get($breakpoints, $screen-size);
+  @if $breakpoint-map {
+    @media (#{$breakpoint-map}) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint value error!";
+  }
 }
